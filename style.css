@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/*desde já, aviso que sou pessima em explicar, mais ainda em css🌹*/
+
+body{
+    background: linear-gradient(to right, #ff9ab3, #ffa5c0);
+}
+
+#barra-navegação{
+  background-color: rgb(255, 88, 116);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  height: 100%;
+  margin-top: 0%;
+  border-radius: 0px 0px 40px 40px;
+}
+
+#barra-navegação:hover{
+    cursor: pointer;
+    background-color: rgb(255, 88, 130);
+    box-shadow: 0 20px 10px rgba(255, 77, 120, 0.3);
+
+}
+
+.lupa-pesquisar{
+    color: black;
+}
+
+.img{
+    width: 100px;
+}
