@@ -1,38 +1,165 @@
 *{
-    margin: 0px;
-    color: rgb(0, 0, 0);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 /*desde já, aviso que sou pessima em explicar, mais ainda em css🌹*/
 
 body{
-    background: linear-gradient(to right, #ff9ab3, #ffa5c0);
+  background-image: linear-gradient(to right, #ff9ab3, #ff769f);
+  width: auto;
+  height:300vh;
 }
 
 #barra-navegação{
-  background-color: rgb(255, 88, 116);
   display: flex;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  height: 100%;
-  margin-top: 0%;
-  border-radius: 0px 0px 40px 40px;
+  gap: 1em;
+  padding: 1em 2em;
+  background-color: rgb(255, 88, 116);
+  border-radius: 0 0 3em 3em;
+  overflow-x:hidden; /* para telas pequenas */
+
 }
 
 #barra-navegação:hover{
-    cursor: pointer;
-    background-color: rgb(255, 88, 130);
-    box-shadow: 0 20px 10px rgba(255, 77, 120, 0.3);
+  background-color: rgb(255, 88, 130);
+  box-shadow: 0 20px 10px rgba(94, 0, 22, 0.37);
 
 }
 
 .lupa-pesquisar{
-    color: black;
+  color: rgb(124, 23, 62);
+  border: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 2em;
+  text-align:start;
+  outline: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAACnElEQVR4nL2V30sUURTHh4oySsKdc2bRColWhK12ztmNKHrYfj3Vg70sQcjOvWNItaZY9iz1twSlUuBrT/0QfBJCDaz+hSjSl36Qxrkzymre3RlbunDhzp0787nne773XMextAHkXIj+Q4U0oYDemi5jpDF55/xrU0A9Gui5Rl7VyGuWvqqAp3YMDDz/ugJeMT8DmldAI9Wsf6I/WzggXcYyp4AXZI1CWlYe9aWHIP9WwN810p1xx9llW1txKrs1Fmsa+Yf5JilM5JJIBBK6/sWkm1Nu8VIEo+VEMsY5WQs9vp0Ust4U8pCREXjKaZp8STzQfCO5GsoIvCj/qGLpuB2ENBbtiEbk+eahUx1pYRp41BjIpQf2RciTZlGG8hGYH4875T1pQGG2cDKyPT2zLpKDaPLj9rZHIHotH6YCub3tMehNChAvKeRHOwIBz9hBSBP10mnglxr5a3+24KWVTjVy3lYziMWjU8+vgu5yWxozKOD71kVy0OLatSBWrTj5vQr4XVyGZhta1onsrZDfR1WFehruSEKOklmsyXM14x/WSHNxPfupkJ8o4BsDGf/MIJQ6N0dDw7EiL5qGLlFJGZFyEnh8WebE4hqpaqoG0Gx0DIq1ypGz+zcgHl0xGwFeuZUtHGsKMlF51Cfhx4VySCRpJJcGGhZILPHn0ONzEvG9XG5fQpiJTKy6KEkWR93F/EHpMpaES07ic/NNI3+pv6sk11vltcsY5cx68cWRT6qO00cD17+wzfulRDBp4japXRrpqTnUwDNmA8Cj9U4M0D9v2dCH0OUup1Ut6C63rd+42/SP4uCWwQah1Cly/RdY6HKXDaaQplsGcmKYRPA3jOZaCpImMimgT3XR/ArBv9Zy0AYMaVoiUUBXZfIPkldT8/9WTdYAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 12px 12px;
+  text-align: center;
+}
+textarea{
+  width: 10px;
+}
+.lupa-pesquisar::placeholder{
+  color: rgb(171, 36, 58,0.3);
+  border: 0;
+  margin-left: -1.2vw;
+  font-size: 0.9em;
+  text-align:center
 }
 
+
 .img{
-    width: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+.botão-favoritados,.botão-carrinho{
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.icone-compras{
+  width: 50px;
+}
+.icone-favoritos{
+  height: 70px;
+
+}
+.Novidades,.Promoções{
+  background-color: #ffffff;
+
+  border: 0;
+  border-radius: 2em;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  font-size: 1em;
+}
+.Novidades:hover, .Promoções:hover ,.botão-carrinho:hover, .botão-favoritados:hover, .img:hover{
+  transform: scale(1.1);
+
+  filter: drop-shadow( 0 10px 2.5px #0000002a)
+}
+.banner{
+  position: block;
+  width:100%;
+  opacity:0.2;
+  height: auto;
+  z-index: 0;
+}
+.black{
+
+  background-color: rgb(0, 0, 0);
+  display: flex;
+
+}
+@font-face {
+  font-family: "Brittany";
+  src: url(Fonts/BrittanySignature.ttf);
+}
+.nome{
+  position: absolute;
+  color: white;
+  font-family:Brittany;
+  font-size: 4.4vw;
+  margin-top: 10%;
+  left: 50%;
+  transform: translate(-52%, -52%);
+}
+.desc{
+  position: absolute;
+  color: white;
+  font-family:Brittany;
+  font-size: 2.4vw;
+  margin-top: 15%;
+  margin-left: 32.5%;
+
+}
+.recepcao{
+  color: #ffffff;
+  font-family: Brittany;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  text-shadow: black;
+  text-shadow: 0px 0px 10px rgb(255, 205, 215);
+}
+.batom-franciny-banner{
+  width: 22%;
+  top:90px;
+  left:100px;
+  transform: rotate(90deg);
+  position: absolute;
+  z-index: 1;
+}
+.PÓMelus-recepcao{
+  width: 16%;
+  top:145px;
+  left:1000px;
+  transform: rotate(50deg);
+  position: absolute;
+  z-index: 1;
+  filter: drop-shadow( 0 -20px 2px #0000002a)
+}
+.mancha-batom{
+  position: absolute;
+  width: 26%;
+  top: 20%;
+  left: 5%;
+  rotate: 165deg;
+  z-index: -1;
+  opacity: 0.8;
+  filter: drop-shadow( 0 10px 2px #0000002a)
 }
