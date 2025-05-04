@@ -7,8 +7,12 @@
 
 /*desde já, aviso que sou pessima em explicar, mais ainda em css🌹*/
 
+p{
+  color: #612eda;
+  font-family: Arial, Helvetica, sans-serif;
+}
 body{
-  background-image: linear-gradient(to right, #ff9ab3, #ff769f);
+  background-image: linear-gradient(to right, #ff9ab3, #ff3975);
   width: auto;
   height:300vh;
 }
@@ -57,12 +61,13 @@ textarea{
   text-align:center
 }
 
+/*botoes da barra de navegação 🐹*/
 
 .img{
   width: 100px;
   cursor: pointer;
 }
-.botão-favoritados,.botão-carrinho{
+.botão-perfil,.botão-carrinho{
   border: 0;
   background: none;
   cursor: pointer;
@@ -70,8 +75,9 @@ textarea{
 .icone-compras{
   width: 50px;
 }
-.icone-favoritos{
+.botão-perfil{
   height: 70px;
+  color: #ffffff;
 
 }
 .Novidades,.Promoções{
@@ -84,11 +90,13 @@ textarea{
   height: 40px;
   font-size: 1em;
 }
-.Novidades:hover, .Promoções:hover ,.botão-carrinho:hover, .botão-favoritados:hover, .img:hover{
+.Novidades:hover, .Promoções:hover ,.botão-carrinho:hover, .botão-perfil:hover, .img:hover{
   transform: scale(1.1);
 
   filter: drop-shadow( 0 10px 2.5px #0000002a)
 }
+
+/* Area do banner 🌹*/
 .banner{
   position: block;
   width:100%;
@@ -102,32 +110,25 @@ textarea{
   display: flex;
 
 }
+
+/* Area das fontes babadeiras 🌹*/
 @font-face {
   font-family: "Brittany";
   src: url(Fonts/BrittanySignature.ttf);
 }
-.nome{
-  position: absolute;
-  color: white;
-  font-family:Brittany;
-  font-size: 4.4vw;
-  margin-top: 10%;
-  left: 50%;
-  transform: translate(-52%, -52%);
+@font-face {
+  font-family: "Rochester";
+  src: url(Fonts/Rochester-Regular.ttf);
 }
-.desc{
-  position: absolute;
-  color: white;
-  font-family:Brittany;
-  font-size: 2.4vw;
-  margin-top: 15%;
-  margin-left: 32.5%;
+@font-face {
+  font-family: "Descricao";
+  src: url(Fonts/Sacramento-Regular.ttf);
+}
 
-}
-.recepcao{
+.recepcao /*Seja bem vinda*/{
   color: #ffffff;
-  font-family: Brittany;
-  font-size: 3em;
+  font-family: Rochester;
+  font-size: 3.5em;
   display: flex;
   justify-content: center;
   align-items:center ;
@@ -135,6 +136,25 @@ textarea{
   margin-bottom: 10vh;
   text-shadow: black;
   text-shadow: 0px 0px 10px rgb(255, 205, 215);
+}
+.nome /*pinkie-makeup*/{
+  position: absolute;
+  color: white;
+  font-family:Rochester;
+  font-size: 4.5vw;
+  margin-top: 10%;
+  left: 50%;
+  transform: translate(-52%, -52%);
+}
+
+.desc /*Descrição*/{
+  position: absolute;
+  color: white;
+  font-family:Descricao;
+  font-size: 2.7vw;
+  margin-top: 15%;
+  margin-left: 32%;
+
 }
 .batom-franciny-banner{
   width: 22%;
@@ -146,7 +166,7 @@ textarea{
 }
 .PÓMelus-recepcao{
   width: 16%;
-  top:145px;
+  top:120px;
   left:1000px;
   transform: rotate(50deg);
   position: absolute;
@@ -163,3 +183,153 @@ textarea{
   opacity: 0.8;
   filter: drop-shadow( 0 10px 2px #0000002a)
 }
+
+
+/*Logo abaixo é a parte somente apenas da parte de OLHOS!!*/
+.vitrine1{
+ background-color: rgb(184, 184, 255);
+  width: 100%;
+  height: 100vh;
+}
+
+.modelo-olhos{
+  margin-top: 2%;
+  width: 32%;
+  border-radius: 40px;
+  border: 2px solid #ffffff;
+  box-shadow: #ffffff 0px 0px 20px;
+}
+
+.titulo-produtos{
+  font-family: Rochester;
+  margin-left: 45%;
+  margin-top: -43%;
+  font-size: 4em;
+  color:whitesmoke
+}
+.produto1 {
+  background-color: rgb(109, 109, 235);
+  width: 19%;
+  height: 65%;
+  position: relative;
+  filter: drop-shadow(0px 0px 20px #0000002a);
+  margin-left: 50%;
+  margin-top: 2%;
+  padding: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+p{
+  margin-top: 2%;
+  color: #ffe600;
+  text-align: center;
+}
+.paleta-sombra {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 10%;
+  margin-top: 6%;
+}
+
+.texto-produto{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5%;
+
+}
+
+.titulo{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.textinho{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: rgb(253, 255, 251);
+  text-align: center;
+}
+
+.preco{
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+
+.carrinho, .btn-buy-card,.like{
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carrinho:hover, .btn-buy-card:hover, .like:hover {
+  background-color: #beffb8;
+  color: #2575cf;
+}
+
+.btn-buy-card {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like:active {
+  background-color: #ffe600;
+}
+
+.btn-buy-card:hover,
+.like:hover {
+  background-color: #beffb8;
+  color: #2575cf;
+}
+
+/* Container para alinhar botão e emoji lado a lado */
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Quebra de linha no texto */
+.descricao {
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+
+
+
+
+/*eu nao aguento mais, eu só quero que funcione, e que fique bonitinho*/
+
+
+
+/*TERMINADA A SESSÃO DE OLHOS!! 🎉🎉*/
+

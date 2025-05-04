@@ -1,0 +1,129 @@
+(function () {
+  window.Webcollage = window.Webcollage || {};
+
+  var wcJS = 'https://scontent.webcollage.net/api/v2/product-content?loadlegacycontent=true';
+  var syndiJsBaseUrl = 'https://syndi.webcollage.net/site/';
+  var trackingUrl = 'https://event.webcollage.net/event'
+
+  /**
+   * @var _functionCalls array:  stores the list of window.Webcollage.xxx function invocations, so we can replay them once we get the notification that syndi doesn't have any content
+   * @var _syndiLoaded: used to prevent double loading of the syndi library
+   */
+  var _functionCalls = [], _syndiLoaded = false, _siteCode, _callbacks = [];
+  
+  /**
+   * tracking function that will be used to quantify the usage of different integrations
+   */
+  setTimeout(function track() {
+    var f = [];
+    for (var i = 0; i < _functionCalls.length; i++) {
+      f.push(_functionCalls[i].f);
+    }
+    var url = trackingUrl + '/fc.gif?siteCode=' + encodeURIComponent(_siteCode) + '&calls=' + encodeURIComponent(f.join('|')) + '&r=' + Math.random();
+    var image = new Image();
+    var done = function () {};
+    image.width = 1;
+    image.border = 0;
+    image.onload = done;
+    image.onerror = done;
+    image.src = url.substr(0, 4089);
+  }, 20000);
+
+  function processCallbacks(hasContent) {    
+    for (var i = _callbacks.length - 1; i >= 0; i--) {
+      switch(_callbacks[i].type) {
+        case "generic":
+        case "hasPowerPageContentCallback":
+          hasContent && _callbacks[i].callback(hasContent);
+          break;
+        case "noPowerPageContentCallback":
+          hasContent || _callbacks[i].callback(hasContent);
+          break;
+      }
+    }
+  }
+
+  /**
+   * This function loads the syndi library for a given website. It also uses the cpi information when available.
+   */
+  function _loadSyndi(siteCode, cpi) {
+    window.Webcollage.cpi = cpi;
+    if (_syndiLoaded) return;
+    _functionCalls.push({f: "_loadSyndi"});
+    window.SYNDI = window.SYNDI || [];
+    
+    // configuring syndi for contentCallback registration
+    window.SYNDI.push({"contentCallback": processCallbacks});
+  
+    // load of the syndi library
+    (function (y, n, di, go) { di = document.createElement(y); di.type = 'text/java'+y;
+        di.async = true; di.src = n + Math.floor(Date.now() / 86400000);
+        go = document.getElementsByTagName(y)[0]; go.parentNode.insertBefore(di,go); }
+      ('script', syndiJsBaseUrl + siteCode + '/tag.js?cv='));
+
+    _syndiLoaded = true;
+    _siteCode = siteCode;
+  };
+
+  function RegisterCallbacks(callback, options) {
+    if (options) {
+      if (options.hasPowerPageContentCallback && typeof options.hasPowerPageContentCallback === 'function')
+        _callbacks.push({type: "hasPowerPageContentCallback", callback: options.hasPowerPageContentCallback});
+      if (options.noPowerPageContentCallback && typeof options.noPowerPageContentCallback === 'function')
+        _callbacks.push({type: "noPowerPageContentCallback", callback: options.noPowerPageContentCallback});
+    }
+    if (callback && typeof callback === 'function')
+      _callbacks.push({type: "generic", callback: callback});
+  }
+
+  /**
+   * The following set of functions are there to expose the same api as the WC product-content javascript does
+   * they all register that invokation in the `_functionCalls` array so they can be replayed once we get the feedback
+   * from the Syndi library that there is no content
+   */ 
+  window.Webcollage.loadContent = function(siteCode, cpi, options, callback) {
+    _functionCalls.push({f: "loadContent", arguments: [siteCode, cpi, options, callback]});
+    RegisterCallbacks(callback, options);
+    _loadSyndi(siteCode, cpi);
+  }
+
+  window.Webcollage.loadProductContent = function (siteCode, cpi, contentPackages) {
+    _functionCalls.push({f: "loadProductContent", arguments: [siteCode, cpi, contentPackages]});
+    if (contentPackages['mosaic-board'] && contentPackages['mosaic-board'].containerSelector) {
+      Webcollage.mosaicTargetSelector = contentPackages['mosaic-board'].containerSelector;
+    }
+    if (contentPackages['power-page']) {
+      if (contentPackages['power-page'].containerSelector)
+        Webcollage.powerPageTargetSelector = contentPackages['power-page'].containerSelector;
+      RegisterCallbacks(undefined, contentPackages['power-page']);
+    }
+    _loadSyndi(siteCode, cpi);
+  }
+
+  window.Webcollage.loadProductContentByWcpc = function (siteCode, wcpc, moduleCode, environment, contentPackages) {
+    _functionCalls.push({f: "loadProductContentByWcpc", arguments: [siteCode, wcpc, moduleCode, environment, contentPackages]});
+    _loadSyndi(siteCode);
+  }
+
+  window.Webcollage.loadProductContentForProductListing = function (siteCode, options) {
+    _functionCalls.push({f: "loadProductContentForProductListing", arguments: [siteCode, options]});
+    _loadSyndi(siteCode);
+  }
+
+  window.Webcollage.loadProductContentForProductListingByWcpc = function (siteCode, moduleCode, environment, options) {
+    _functionCalls.push({f: "loadProductContentForProductListingByWcpc", arguments: [siteCode, moduleCode, environment, options]});
+    _loadSyndi(siteCode);
+  }
+
+  window.Webcollage.loadSectionsContent = function (cpi, siteCode, type, callback) {
+    _functionCalls.push({f: "loadSectionsContent", arguments: [cpi, siteCode, type, callback]});
+    RegisterCallbacks(callback);
+    _loadSyndi(siteCode, cpi);
+  }
+
+  window.Webcollage.loadSectionsContentByWcpc = function (wcpc, siteCode, moduleCode, environment, type, callback) {
+    _functionCalls.push({f: "loadSectionsContentByWcpc", arguments: [wcpc, siteCode, moduleCode, environment, type, callback]});
+    RegisterCallbacks(callback);
+    _loadSyndi(siteCode);
+  }; 
+}());
