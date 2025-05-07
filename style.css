@@ -1,4 +1,6 @@
-@import url(./vitrine1.css);
+@import url(./vitrine1/produto1.css);
+@import url(./vitrine1/produto2.css);
+@import url(./vitrine1/produto3.css);
 
 *{
   margin: 0px;
@@ -53,6 +55,8 @@ body{
 textarea{
   width: 10px;
 }
+
+
 .lupa-pesquisar::placeholder{
   color: rgb(171, 36, 58,0.3);
   border: 0;
@@ -80,7 +84,7 @@ textarea{
   color: #ffffff;
 
 }
-.Novidades,.Promoções{
+.Novidades,.Makes{
   background-color: #ffffff;
   border: 0;
   border-radius: 2em;
@@ -89,7 +93,7 @@ textarea{
   height: 40px;
   font-size: 1em;
 }
-.Novidades:hover, .Promoções:hover ,.botão-carrinho:hover, .botão-perfil:hover, .img:hover{
+.Novidades:hover, .Makes:hover ,.botão-carrinho:hover, .botão-perfil:hover, .img:hover{
   transform: scale(1.1);
 
   filter: drop-shadow( 0 10px 2.5px #0000002a)
@@ -176,6 +180,29 @@ textarea{
   z-index: 1;
   filter: drop-shadow( 0 -20px 2px #0000002a)
 }
+.vitrine1 {
+  background-color: rgb(184, 184, 255);
+  width: 100%;
+  height: 105vh;
 
+}
+
+.modelo-olhos {
+  margin-left: 2%;
+  margin-top: 3%;
+  width: 30%;
+  border-radius: 40px;
+  border: 2px solid #ffffff;
+  box-shadow: #ffffff 0px 0px 20px;
+}
+
+.titulo-produtos {
+  font-family: Rochester;
+  margin-left: 50%;
+  margin-top: -43%;
+  font-size: 4em;
+  color: rgb(255, 255, 255);
+
+}
 
 /*Logo abaixo é a parte somente apenas da parte de OLHOS!!*/
