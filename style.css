@@ -1,3 +1,5 @@
+@import url(./vitrine1.css);
+
 *{
   margin: 0px;
   color: rgb(0, 0, 0);
@@ -9,7 +11,7 @@
 
 
 body{
-  background-image: linear-gradient(to right, #9310ff,rgb(207, 20, 51), #ff109b);
+  background-image: linear-gradient(to right, #9310ff,rgb(20, 207, 198), #1093ff);
   width: auto;
   height:300vh;
 }
@@ -21,15 +23,16 @@ body{
   align-items: center;
   gap: 1em;
   padding: 1em 2em;
-  background-color: rgb(37, 170, 126);
+  background-image: linear-gradient(to right, #9310ff,rgb(20, 207, 198), #4aaeff);
   border-radius: 0 0 3em 3em;
   overflow-x:hidden; /* para telas pequenas */
+  box-shadow: #6b6666 0px 0px 10px;
 
 }
 
 #barra-navegação:hover{
-  background-color: rgb(255, 88, 130);
-  box-shadow: 0 20px 10px rgba(94, 0, 22, 0.37);
+  background-image: linear-gradient(to right, #a83fff,rgb(20, 207, 198), #1093ff);
+  box-shadow: 0 15px 10px rgba(36, 0, 94, 0.37);
 
 }
 
@@ -79,7 +82,6 @@ textarea{
 }
 .Novidades,.Promoções{
   background-color: #ffffff;
-
   border: 0;
   border-radius: 2em;
   cursor: pointer;
@@ -125,6 +127,7 @@ textarea{
   font-family: "descricao-produto";
   src: url(Fonts/Georema-Descrição.ttf);
 }
+
 .recepcao /*Seja bem vinda*/{
   color: #ffffff;
   font-family: Rochester;
@@ -137,7 +140,7 @@ textarea{
   text-shadow: black;
   text-shadow: 0px 0px 10px rgb(255, 205, 215);
 }
-.nome /*pinkie-makeup*/{
+.nome /*Shiny-Mood*/{
   position: absolute;
   color: white;
   font-family:Rochester;
@@ -153,10 +156,10 @@ textarea{
   font-family:Descricao;
   font-size: 2.7vw;
   margin-top: 15%;
-  margin-left: 32%;
+  margin-left: 35%;
 
 }
-.batom-franciny-banner{
+.batom-franciny-recep{
   width: 22%;
   top:90px;
   left:100px;
@@ -173,157 +176,6 @@ textarea{
   z-index: 1;
   filter: drop-shadow( 0 -20px 2px #0000002a)
 }
-.mancha-batom{
-  position: absolute;
-  width: 26%;
-  top: 20%;
-  left: 5%;
-  rotate: 165deg;
-  z-index: -1;
-  opacity: 0.8;
-  filter: drop-shadow( 0 10px 2px #0000002a)
-}
 
 
 /*Logo abaixo é a parte somente apenas da parte de OLHOS!!*/
-.vitrine1{
- background-color: rgb(184, 184, 255);
-  width: 100%;
-  height: 100vh;
-}
-
-.modelo-olhos{
-  margin-top: 2%;
-  width: 32%;
-  border-radius: 40px;
-  border: 2px solid #ffffff;
-  box-shadow: #ffffff 0px 0px 20px;
-}
-
-.titulo-produtos{
-  font-family: Rochester;
-  margin-left: 45%;
-  margin-top: -43%;
-  font-size: 4em;
-  color:rgb(15, 15, 15);
-  
-}.produto1 {
-  background-color: white;
-  width: 220px;
-  padding: 1em;
-  border-radius: 1em;
-  box-shadow: 0 0 1em #00000020;
-  margin: 1em auto;
-  position: relative;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.paleta-sombra {
-  width: 90%;
-  height: auto;
-  border-radius: 0.5em;
-  margin: 0 auto 1em;
-  display: block;
-}
-
-.like {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  border: 2px solid #afacac;
-  border-radius: 10px;
-}
-
-.like:hover {
-  background-color: hsl(340, 100%, 64%);
-  box-shadow: 0 0 5px #00000020;
-}
-
-
-.desc-prod {
-  margin: 0.5em 0;
-  font-family: "Descricao-produto", sans-serif;
-  color: #78777a;
-}
-
-.titulo {
-  font-size: 1em;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #6b6666;
-  margin-bottom: 5px;
-  text-decoration: underline;
-}
-
-.preco {
-  font-family: "Descricao-produto", sans-serif;
-  color: white;
-  background-color: rgb(19, 223, 145);
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 10px;
-}
-
-.textinho {
-  font-size: 0.8em;
-  color: #888;
-  margin-top: 0.5em;
-}
-
-.botões-produto {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  margin-top: 1em;
-}
-
-.carrinho, .btn-buy-card {
-  border: none;
-  padding: 0.8em;
-  border-radius: 2em;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.carrinho {
-  background-color: #333;
-  color: #fff;
-}
-
-.btn-buy-card {
-  background-color: #00c9a7;
-  color: white;
-}
-
-.carrinho:hover {
-  background-color: #444;
-}
-
-.btn-buy-card:hover {
-  background-color: #00b196;
-}
-
-.acoes {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* Quebra de linha no texto */
-.descricao {
-  line-height: 1.5;
-  white-space: pre-line;
-}
-
-.botões-produto{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/*TERMINADA A SESSÃO DE OLHOS!! 🎉🎉*/

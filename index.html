@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icone" href="TEMPLATES/logo de navegação transparente.png">
-    <title>Trabalho Final do Módulo Básico da Turma FST2</title>
+    <link rel="icon" href="TEMPLATES/logo transparente.png">
+    <title>Trabalho Final-Shiny Mood!</title>
 </head>
 
 <body>
     <main>
         <nav id="barra-navegação">
-            <img src="TEMPLATES/logo de navegação transparente.png" class="img" alt="logo da nossa lojinha!"
+            <img src="TEMPLATES/logo transparente.png" class="img" alt="logo da nossa lojinha!"
                 title="｡⋆｡˚Pinkie - Maquiagem˚｡⋆｡" />
             <!--até tentei colocar um label mas ainda não...-->
             <input type="text" src="/TEMPLATES/icone do carrinho.png" class="lupa-pesquisar" size="1"
@@ -32,20 +32,18 @@
         <h2 class="recepcao">⋆｡°Seja bem-vindo!⋆｡°</h2>
 
 
-        <img src="TEMPLATES/batom-franciny-banner.png" class="batom-franciny-banner" alt="Batom da Franciny Elkhe">
-        <img src="TEMPLATES/manchadebatom.png" class="mancha-batom">
-
-
+        <img src="TEMPLATES/batom-franciny-banner.png" class="batom-franciny-recep" alt="Batom da Franciny Elkhe">
         <img src="TEMPLATES/pó-melus.png" class="PÓMelus-recepcao" alt="PÓMelus-recepcao">
         <div class="black">
-            <h2 class="nome">｡⋆｡˚Pinkie - Maquiagem˚｡⋆｡</h2>
-            <h3 class="desc">A loja de maquiagens perfeita para você!</h3>
+            <h2 class="nome">｡⋆｡˚ Shiny - Mood˚｡⋆｡</h2>
+            <!--se tiver uma descrição melhor por favor mude kkkkkk-->
+            <h3 class="desc">Qual seu mood de maquiagem hoje?</h3>
             <img class="banner" src="TEMPLATES/banner.jpg" alt="Banner da Página-">
         </div>
 
         <!--seção dos olhos-->
         <section class="vitrine1">
-            <div class="olhos">
+            <div>
                 <img src="TEMPLATES/modelo-olhos.jpg" alt="Modelo-Olhos" class="modelo-olhos">
             </div>
 
@@ -65,10 +63,57 @@
                         <button class="btn-buy-card">
                            Comprar agora
                         </button>
-                        <button class="like">♡</button>
+                        <input type="checkbox" id="fav" class="fav-checkbox">
+                        <label for="fav" class="like">❤</label>
                     </div>
                         <p class="textinho">10% de desconto na primeira compra</p>
                 </div>
+                 <!--PRODUTO DOIS-MASCARA DE CILIOS-->
+                <div class="produto2">
+                    <img src="TEMPLATES/mascara-de-cilios.png" alt="img-mascara-cilios" class="mascara-cilios">
+
+                    <div> <!--DESCRIÇÃO DO PRODUTO-->
+                        <h3 class="titulo">Máscara de Cílios-Natura!</h3>
+                        <h2 class="preco">R$33,90</h2>
+                        <p class="desc-prod">Multimáscara de cílios á prova d'agua</p>
+                        
+                    </div>
+
+
+                    <div class="botões-produto">
+                        <button class="carrinho">Adicionar ao carrinho 🛒</button>
+                        <button class="btn-buy-card">
+                           Comprar agora
+                        </button>
+                        <input type="checkbox" id="fav" class="fav-checkbox">
+                        <label for="fav" class="like">❤</label>
+                    </div>
+                        <p class="textinho">10% de desconto na primeira compra</p>
+                </div>
+                <!--PRODUTO TRÊS-DELINEADO-OCEANE-->
+                
+                <div class="produto3">
+                    <img src="TEMPLATES/mascara-de-cilios.png" alt="img-delineador" class="delineador-oceane">
+
+                    <div> <!--DESCRIÇÃO DO PRODUTO-->
+                        <h3 class="titulo">Máscara de Cílios-Natura!</h3>
+                        <h2 class="preco">R$27,99</h2>
+                        <p class="desc-prod">Caneta Delineadora Oceane Cor: Preta</p>
+                    </div>
+
+
+                    <div class="botões-produto">
+                        <button class="carrinho">Adicionar ao carrinho 🛒</button>
+                        <button class="btn-buy-card">
+                           Comprar agora
+                        </button>
+                        <input type="checkbox" id="fav" class="fav-checkbox">
+                        <label for="fav" class="like">❤</label>
+                    </div>
+
+                    <p class="textinho3">Frete grátis apartir da segunda unidade</p>
+                </div>
+
             </div>
         </section>
     </main>

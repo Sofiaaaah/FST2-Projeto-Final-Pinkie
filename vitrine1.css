@@ -1,0 +1,461 @@
+/*PRODUTOS UM E DOIS*/
+
+.vitrine1 {
+    background-color: rgb(184, 184, 255);
+    width: 100%;
+    height: 105vh;
+
+}
+
+.modelo-olhos {
+    margin-left: 2%;
+    margin-top: 3%;
+    width: 30%;
+    border-radius: 40px;
+    border: 2px solid #ffffff;
+    box-shadow: #ffffff 0px 0px 20px;
+}
+
+.titulo-produtos {
+    font-family: Rochester;
+    margin-left: 50%;
+    margin-top: -43%;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+
+}
+
+.produto1 {
+    background-color: white;
+    width: 220px;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em #00000020;
+    margin: 1em auto;
+    position: relative;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.paleta-sombra {
+    width: 90%;
+    height: auto;
+    border-radius: 0.5em;
+    margin: 0 auto 1em;
+    display: block;
+}
+
+
+/*BOTÃO DE LIKE*/
+.like {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #afacac;
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #999999;
+
+}
+
+.fav-checkbox {
+    display: none;
+}
+
+.fav-checkbox:checked+.like {
+    color: rgb(255, 95, 149);
+    transform: scale(1.1);
+    border: 2px solid rgb(105, 236, 127);
+}
+
+.like:hover {
+    color: rgb(255, 95, 149);
+    background-color: hsl(147, 100%, 72%);
+    box-shadow: 0 0 5px #00000020;
+}
+
+/* FIM DO BOTÃO DE LIKE */
+
+
+.desc-prod {
+    margin: 0.5em 0;
+    font-family: "Descricao-produto", sans-serif;
+    color: #78777a;
+}
+
+.titulo {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #6b6666;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.preco {
+    font-family: "Descricao-produto", sans-serif;
+    color: white;
+    background-color: rgb(19, 223, 145);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.textinho {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 0.5em;
+}
+
+.botões-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.carrinho,
+.btn-buy-card {
+    border: none;
+    padding: 0.8em;
+    border-radius: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrinho {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-buy-card {
+    background-color: #00c9a7;
+    color: white;
+}
+
+.carrinho:hover {
+    background-color: #444;
+}
+
+.btn-buy-card:hover {
+    background-color: #00b196;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Quebra de linha no texto */
+.descricao {
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.botões-produto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*🫴🫴🌹🌹🌹🌹🌹🌹🌹PRODUTO DOOOOOOOOOOISSSSSSSSSS🌹🌹🌹🌹🌹🌹🌹🌹🫴🫴*/
+
+
+.produto2 {
+    margin-left: 60%;
+    margin-top: -36.3%;
+    background-color: white;
+    width: 220px;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em #00000020;
+    position: relative;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.mascara-cilios{
+    width: 90%;
+    height: auto;
+    border-radius: 0.5em;
+    margin: 0 auto 1em;
+    display: block;
+}
+
+
+/*BOTÃO DE LIKE DO PRODUTO DOIS*/
+.like2 {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #afacac;
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #999999;
+
+}
+
+.fav-checkbox2 {
+    display: none;
+}
+
+.fav-checkbox2:checked+.like2 {
+    color: rgb(255, 95, 149);
+    border: 2px solid rgb(105, 236, 127);
+    transform: scale(1.1);
+    
+}
+
+.like2:hover {
+    color: rgb(255, 95, 149);
+    background-color: hsl(147, 100%, 72%);
+    box-shadow: 0 0 5px #00000020;
+}
+
+/* FIM DO BOTÃO DE LIKE DO PRODUTO DOIS */
+
+
+.desc-prod {
+    margin: 0.5em 0;
+    font-family: "Descricao-produto", sans-serif;
+    color: #78777a;
+}
+
+.titulo {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #6b6666;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.preco {
+    font-family: "Descricao-produto", sans-serif;
+    color: white;
+    background-color: rgb(19, 223, 145);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.textinho {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 0.5em;
+}
+
+.botões-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.carrinho,
+.btn-buy-card {
+    border: none;
+    padding: 0.8em;
+    border-radius: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrinho {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-buy-card {
+    background-color: #00c9a7;
+    color: white;
+}
+
+.carrinho:hover {
+    background-color: #444;
+}
+
+.btn-buy-card:hover {
+    background-color: #00b196;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Quebra de linha no texto */
+.descricao {
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.botões-produto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+/*🌹🌹🌹🌹 FIM DO PRODUTO DOISSSSSSSSSS🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹 */
+/*Desculpa os espaçamento mas e que eu me perco mais do que acho as coisa*/
+/*🫴🫴🌹🌹🌹🌹🌹🌹🌹 PRODUTO TRÊS 🌹🌹🌹🌹🌹🌹🌹🌹🫴🫴*/
+
+
+.produto3 {
+    margin-left: 80%;
+    margin-top: -35%;
+    background-color: white;
+    width: 220px;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em #00000020;
+    position: relative;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.delineador-oceane{
+    width: 90%;
+    height: auto;
+    border-radius: 0.5em;
+    margin: 0 auto 1em;
+    display: block;
+}
+
+
+/*BOTÃO DE LIKE DO PRODUTO DOIS*/
+.like3 {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #afacac;
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #999999;
+
+}
+
+.fav-checkbox3 {
+    display: none;
+}
+
+.fav-checkbox3:checked+.like3 {
+    color: rgb(255, 95, 149);
+    border: 2px solid rgb(105, 236, 127);
+    transform: scale(1.1);
+    
+}
+
+.like3:hover {
+    color: rgb(255, 95, 149);
+    background-color: hsl(147, 100%, 72%);
+    box-shadow: 0 0 5px #00000020;
+}
+
+/* FIM DO BOTÃO DE LIKE DO PRODUTO TRES*/
+
+
+.desc-prod {
+    margin: 0.5em 0;
+    font-family: "Descricao-produto", sans-serif;
+    color: #78777a;
+}
+
+.titulo {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #6b6666;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.preco {
+    font-family: "Descricao-produto", sans-serif;
+    color: white;
+    background-color: rgb(19, 223, 145);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.textinho3 {
+    font-size: 0.7em;
+    color: #888;
+    margin-top: 0.5em;
+}
+
+.botões-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.carrinho,
+.btn-buy-card {
+    border: none;
+    padding: 0.8em;
+    border-radius: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrinho {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-buy-card {
+    background-color: #00c9a7;
+    color: white;
+}
+
+.carrinho:hover {
+    background-color: #444;
+}
+
+.btn-buy-card:hover {
+    background-color: #00b196;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Quebra de linha no texto */
+.descricao {
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.botões-produto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*🌹🌹🌹🌹 FIM DO PRODUTO TREEEEEEEEESSSSSSSSSS🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹*/
