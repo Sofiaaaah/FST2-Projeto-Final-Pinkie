@@ -1,5 +1,5 @@
-.produto2 {
-    margin-left: 60.4%;
+.produto2-blush {
+    margin-left: 20.3%;
     margin-top: -36.3%;
     background-color: white;
     width: 220px;
@@ -11,7 +11,7 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-.mascara-cilios{
+.blush-cremoso{
     width: 90%;
     height: auto;
     border-radius: 0.5em;
@@ -22,6 +22,7 @@
 
 /*BOTÃO DE LIKE DO PRODUTO DOIS*/
 .like2 {
+    
     position: absolute;
     top: 0.5em;
     right: 0.5em;
@@ -71,7 +72,7 @@
     text-decoration: underline;
 }
 
-.preco {
+.preco2 {
     font-family: "Descricao-produto", sans-serif;
     color: white;
     background-color: rgb(19, 223, 145);
@@ -138,5 +139,3 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
-

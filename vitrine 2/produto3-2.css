@@ -1,17 +1,17 @@
-.produto2 {
-    margin-left: 60.4%;
-    margin-top: -36.3%;
+.produto3-iluminador {
+    margin-left: 40%;
+    margin-top: -35.1%;
     background-color: white;
     width: 220px;
+    height: 445px;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0 0 1em #00000020;
     position: relative;
     text-align: center;
-    font-family: 'Segoe UI', sans-serif;
 }
 
-.mascara-cilios{
+.iluminador-BrunaTavares {
     width: 90%;
     height: auto;
     border-radius: 0.5em;
@@ -21,7 +21,7 @@
 
 
 /*BOTÃO DE LIKE DO PRODUTO DOIS*/
-.like2 {
+.like3 {
     position: absolute;
     top: 0.5em;
     right: 0.5em;
@@ -37,25 +37,23 @@
 
 }
 
-.fav-checkbox2 {
+.fav-checkbox3 {
     display: none;
 }
 
-.fav-checkbox2:checked+.like2 {
+.fav-checkbox3:checked+.like3 {
     color: rgb(255, 95, 149);
     border: 2px solid rgb(105, 236, 127);
     transform: scale(1.1);
+}
+
+.like3:hover {
+    color: rgb(255, 95, 149);
+    background-color: hsl(147, 100%, 72%);
     
 }
 
-.like2:hover {
-    color: rgb(255, 95, 149);
-    background-color: hsl(147, 100%, 72%);
-    box-shadow: 0 0 5px #00000020;
-}
-
-/* FIM DO BOTÃO DE LIKE DO PRODUTO DOIS */
-
+/* FIM DO BOTÃO DE LIKE DO PRODUTO TRES*/
 
 .desc-prod {
     margin: 0.5em 0;
@@ -71,30 +69,30 @@
     text-decoration: underline;
 }
 
-.preco {
+.preco2 {
     font-family: "Descricao-produto", sans-serif;
     color: white;
-    background-color: rgb(19, 223, 145);
+    background-color: rgb(84, 223, 19);
     font-size: 30px;
     font-weight: bold;
     border-radius: 10px;
 }
 
-.textinho {
-    font-size: 0.8em;
+.textinho3 {
+    font-size: 0.7em;
     color: #888;
     margin-top: 0.5em;
 }
 
-.botões-produto {
+.botões-produto2 {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     margin-top: 1em;
 }
 
-.carrinho,
-.btn-buy-card {
+.carrinho2,
+.btn-buy-card2 {
     border: none;
     padding: 0.8em;
     border-radius: 2em;
@@ -102,22 +100,22 @@
     cursor: pointer;
 }
 
-.carrinho {
-    background-color: #333;
+.carrinho2 {
+    background-color: #ffaf1c;
     color: #fff;
 }
 
-.btn-buy-card {
-    background-color: #00c9a7;
+.btn-buy-card2 {
+    background-color: #e91f9c;
     color: white;
 }
 
 .carrinho:hover {
-    background-color: #444;
+    background-color: #ffbb3c;
 }
 
 .btn-buy-card:hover {
-    background-color: #00b196;
+    background-color: #00b118;
 }
 
 .acoes {
@@ -138,5 +136,3 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
