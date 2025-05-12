@@ -1,0 +1,200 @@
+* {
+  margin: 0px;
+  color: rgb(90, 90, 90);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.body{
+  background-image: linear-gradient(to right, green, pink)
+}
+
+@font-face {
+  font-family: "Rochester";
+  src: url(Fonts/Rochester-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Descricao";
+  src: url(Fonts/Sacramento-Regular.ttf);
+}
+
+@font-face {
+  font-family: "descricao-produto";
+  src: url(Fonts/Georema-Descrição.ttf);
+}
+
+.caixas {
+  box-shadow: white 0px 0px 10px;
+  border-radius: 15px;
+  border: #cccccc 2px solid;
+  background-color: white;
+  height: 500px;
+  width: 270px;
+  margin-left: 4%;
+  margin-top: 3%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caixas:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.posicao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.nome-produto {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.carrinho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #383838;
+  /* cor preta */
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  width: 90%;
+  margin: 0.4em auto;
+}
+
+.carrinho:hover {
+  background-color: #1a1a1a;
+  /* cor cinza escuro */
+}
+
+.botao-comprar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00c878;
+  /* verde vibrante */
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  width: 90%;
+  margin: 0.4em auto;
+}
+.botao-comprar, .carrinho{
+  position: relative;
+  top: 1%;
+}
+
+.botao-comprar:hover {
+  background-color: #018d53;
+
+}
+
+.like {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 2px solid #afacac;
+  border-radius: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #999999;
+
+}
+
+.fav-checkbox {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label {
+    color: rgb(255, 95, 149);
+    border: 2px solid rgb(105, 236, 127);
+}
+
+.like:hover {
+  color: rgb(255, 95, 149);
+  background-color: hsl(108, 100%, 59%);
+  border: 2px solid rgb(255, 49, 84);
+}
+
+
+.preco {
+  color: white;
+  margin: 10px 20px 10px 20px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-family: descricao-produto;
+  font-size: 1.5em;
+  background-color: rgb(44, 185, 44);
+
+
+}
+
+.preco:hover {
+  background-color: rgb(27, 204, 116);
+  color: rgb(255, 255, 255);
+}
+
+p {
+  text-align: center;
+  font-family: descricao-produto;
+  color: rgb(97, 92, 97);
+}
+.textinho{
+  text-align: center;
+  font-family: descricao-produto;
+  color: rgb(97, 92, 97);
+  font-size: 0.8em;
+  margin: 7%;
+}
+footer {
+  color: white;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(135deg, #3d4e9e, #784dff, #e7a6b6, #ea5b6c, #d36120);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-titulo {
+  color: white;
+  font-family: descricao-produto;	
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.texto-footer,.texto-footer2 {
+  color: white;
+  font-family: descricao-produto;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+a{
+  color: white;
+  font-family: descricao-produto;
+  
+  
+}
+
+.github-link {
+  color: #fffafa;
+}
+.github-link:hover {
+   transform: scale(1.05);
+}

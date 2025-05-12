@@ -1,19 +1,123 @@
-@import url(navegacao.css);
+
+* {
+  margin: 0px;
+  color: rgb(121, 120, 120);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/*desde já, aviso que sou pessima em explicar, mais ainda em css🌹*/
+
+
+
+body {
+  background-color: white;
+
+}
+
+.barra-navegação {
+  height: 70px;
+  top: 0%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background: linear-gradient(298deg,rgb(255, 83, 123) 5%, rgba(255, 255, 0, 1) 46%, rgba(72, 234, 229, 1) 62%, rgba(181, 69, 255, 1) 86%, rgba(102, 93, 199, 1) 100%);
+  border-radius: 0 0 3em 3em;
+  /* para telas pequenas */
+  box-shadow: #6b6666 0px 0px 10px;
+  position: sticky;
+  z-index: 2;
+
+}
+
+.barra-navegação:hover {
+  background: linear-gradient(298deg,rgb(255, 55, 102) 5%, rgb(255, 255, 70) 46%, rgb(63, 255, 249) 62%, rgb(198, 112, 255) 86%, rgb(104, 90, 255) 100%);
+  box-shadow: 0 15px 10px grey;
+
+}
+
+.lupa-pesquisar {
+  color: rgb(124, 23, 62);
+  border: 2px;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: 12px 9px;
+  
+}
+
+textarea {
+  width: 10px;
+}
+
+
+.lupa-pesquisar::placeholder {
+  color: rgb(171, 36, 58, 0.3);
+  border: 0;
+  margin-left: -1.2vw;
+  font-size: 0.9em;
+  text-align: center
+}
+
+/*botoes da barra de navegação 🐹*/
+
+.img {
+  width: 100px;
+
+}
+
+
+.botão-carrinho{
+  background:none;
+  cursor: pointer;
+  border: 0px;
+
+}
+
+.icone-compras {
+  width: 50px;
+}
+
+.botão-perfil {
+  width: 50px;
+  border: 0px;
+  background: none;
+  cursor: pointer;
+}
+
+.Novidades,
+.Makes {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2em;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  font-size: 1em;
+  
+}
+
+.Novidades:hover,
+.Makes:hover,
+.botão-carrinho:hover,
+.botão-perfil:hover
+{
+  transform: scale(1.1);
+
+  filter: drop-shadow(0 10px 2.5px #0000002a)
+}
+
 
 /* Area do banner 🌹*/
 .banner {
   position: block;
   width: 100%;
-  opacity: 0.2;
   height: auto;
   z-index: 0;
-}
-
-.black {
-
-  background-color: rgb(0, 0, 0);
-  display: flex;
-
 }
 
 /* Area das fontes babadeiras 🌹*/
@@ -36,12 +140,18 @@
   font-family: "descricao-produto";
   src: url(Fonts/Georema-Descrição.ttf);
 }
-
+.estrelado-css {
+  background: linear-gradient(to right, #ffc4de, #fff8cd);
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 .recepcao
 
 /*Seja bem vinda*/
   {
-  color: #231a77;
+  color: #ff4e92;
   font-family: Rochester;
   font-size: 3.5em;
   display: flex;
@@ -50,7 +160,7 @@
   margin-top: 10vh;
   margin-bottom: 10vh;
   text-shadow: rgb(255, 255, 255);
-  text-shadow: 0px 20px 30px rgb(205, 225, 255);
+  text-shadow: 0px 20px 30px rgb(255, 255, 255);
 }
 
 .nome
@@ -83,9 +193,10 @@
   width: 20%;
   top: 10%;
   left: 100px;
-  transform: rotate(90deg);
+  transform: rotate(70deg);
   position: absolute;
   z-index: 1;
+  filter: drop-shadow(0 -20px 8px #0000002a)
 }
 
 .PÓMelus-recepcao {
@@ -110,10 +221,13 @@
   margin-right: 1%;
   position: relative;
   left: 2%;
-
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.caixas:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 .posicao {
   display: flex;
   flex-direction: row-reverse;
@@ -127,6 +241,8 @@
   border: 10px solid rgb(255, 255, 255);
   animation: gradient 15s ease infinite;
   border-radius: 20px;
+  
+  
 
 }
 
@@ -224,8 +340,8 @@
 }
 
 .botao-comprar:hover {
-  background-color: #00b067;
-  /* verde mais escuro */
+  background-color: #018d53;
+
 }
 
 .like {
@@ -255,7 +371,8 @@ input[type="checkbox"]:checked + label {
 
 .like:hover {
   color: rgb(255, 95, 149);
-  background-color: hsl(147, 100%, 72%);
+  background-color: hsl(108, 100%, 59%);
+  
 }
 
 
@@ -282,6 +399,7 @@ p {
   font-family: descricao-produto;
   color: rgb(97, 92, 97);
 }
+
 .textinho{
   text-align: center;
   font-family: descricao-produto;
@@ -314,11 +432,7 @@ footer {
   margin-bottom: 10px;
 }
 
-a{
-  color: white;
-  font-family: descricao-produto;
-  
-}
+
 
 .github-link {
   color: #fffafa;
