@@ -1,0 +1,89 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./TEMPLATES/login-foto.webp);
+    background-size: 400% 400%;
+    height: 180vh
+}
+
+
+.tela-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(30%);
+}
+
+.aba-login {
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 40vw;
+    height: 100vh;
+    text-align: center;
+    
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    border:2px #ffffff8a solid;
+}
+
+.title {
+    margin-bottom: 1.5em;
+    margin-top: 0;
+    font-family: 'Rochester';
+    font-size: 2em;
+    color: #ffffff;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 2em;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1em;
+    outline: none;
+    transition: box-shadow 0.5s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(238, 148, 155, 0.795);
+}
+
+.modelo {
+    width: 80px;
+    border-radius: 50em;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -7vh;
+    border: 2px #ffffff solid;
+}
+.registrar{
+    border: 0;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 3em;
+    margin-bottom: 3vh;
+    cursor: pointer;
+    background-color: #ffd6c0;
+    color: #aa8e7f;
+    font-family: "descricao-produto";
+}
+.aba-login input::placeholder{
+    font-family: "descricao-produto";
+    font-size:0.8em;
+}
+.registrar:hover{
+    box-shadow: 0 0 0 3px rgba(238, 148, 155, 0.795);
+
+}
+.register{
+    
+    font-family: "descricao-produto";
+    font-style: normal;
+}

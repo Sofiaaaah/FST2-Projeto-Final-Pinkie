@@ -1,13 +1,12 @@
 * {
   margin: 0px;
-  color: rgb(90, 90, 90);
+  color: rgb(121, 120, 120);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
-
-.body{
-  background-image: linear-gradient(to right, green, pink)
+body {
+  background-image: linear-gradient(200deg, pink, rgb(255, 213, 134));
 }
 
 @font-face {
@@ -24,7 +23,21 @@
   font-family: "descricao-produto";
   src: url(Fonts/Georema-Descrição.ttf);
 }
-
+.voltar{
+  position: absolute;
+  top: 35%; /* ou top: 50px; se quiser mais pra cima */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffbddc;
+  color: white;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 .caixas {
   box-shadow: white 0px 0px 10px;
   border-radius: 15px;
@@ -169,6 +182,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 3.5%;
 }
 
 #footer-titulo {
